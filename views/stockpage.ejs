@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+<h1>Stocks</h1>
+
+
+<li id="stock"> <strong><%= data["Meta Data"]["2. Symbol"]%></strong>: <%= data["Time Series (Daily)"]["2019-10-18"]["1. open"] %>  </li> 
+
+
+<h3 id="walletAmount">5000</h3>
+    Amount:<br>
+    <input id= "amount" type="text"  >
+    <br>
+    Ticker:<br>
+    <input id = "ticker" type="text"  >
+    <br><br>
+  <button onclick="buy()">Buy</button>
+
+
+  <script>
+  function buy() {
+    document.getElementById("walletAmount").innerHTML = document.getElementById("walletAmount").innerHTML - document.getElementById("amount").value;
+  }
+  </script>
+
+
+
+<% include partials/footer %>
